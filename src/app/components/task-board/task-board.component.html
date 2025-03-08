@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <app-task-column
+    class="col-md-4"
+    title="Applied"
+    [tasks]="applied"
+    columnId="appliedList"
+    [connectedLists]="['shortlistedList', 'interviewList']"
+    ></app-task-column>
+    
+    <app-task-column
+    class="col-md-4"
+    title="Shortlisted"
+    [tasks]="shortlisted"
+    columnId="shortlistedList"
+    [connectedLists]="['appliedList', 'interviewList']"
+    ></app-task-column>
+    
+    <app-task-column
+    class="col-md-4"
+      title="Interview"
+      [tasks]="interview"
+      columnId="interviewList"
+      [connectedLists]="['appliedList', 'shortlistedList']"
+    ></app-task-column>
+  </div>
+</div>

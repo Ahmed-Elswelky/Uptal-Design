@@ -1,0 +1,90 @@
+<!-- <div class="col-md-4">
+  <div class="card">
+    <div class="card-header text-center fw-bold">{{ title }}</div>
+    <div class="card-body">
+      <div
+        cdkDropList
+        [cdkDropListId]="columnId"
+        [cdkDropListData]="tasks"
+        [cdkDropListConnectedTo]="connectedLists"
+        (cdkDropListDropped)="drop.emit($event)"
+        class="task-list"
+      >
+        <app-task-card
+          *ngFor="let task of tasks"
+          [task]="task"
+          cdkDrag
+          class="draggable"
+        ></app-task-card>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+  <div class="card">
+    <div class="title-row row mb-3">
+        <div class="title col-md-6">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <p class="mb-0">
+            {{ title }}
+          </p>
+        </div>
+        <a href="/" class="col-md-6 title-a"> +  Add Applicants</a>
+    </div>
+    <div class="row mb-3 numbers ">
+        <div class="d-inline-block col-md-8 lightGray">
+          <span class="fw-bold text-black">8</span> Rejected
+        </div>
+        <div class="d-inline-block col-md-4 lightGray">
+          <span class="fw-bold text-black">24</span> Total
+        </div>
+    </div>
+      <div class="row mb-3">
+        <div
+        cdkDropList
+        [id] = "columnId"
+        [cdkDropListData]="tasks"
+        [cdkDropListConnectedTo]="connectedLists"
+        (cdkDropListDropped)="drop($event)"
+        class="task-list"
+        >
+        @for (task of tasks; track task) {
+          <app-task-card [task]="task" cdkDrag></app-task-card>
+        }
+      </div>
+    </div>
+  </div>
+
+
+<!-- <div class="example-container">
+  <h2>To do</h2>
+
+  <div
+    cdkDropList
+    #todoList="cdkDropList"
+    [cdkDropListData]="todo"
+    [cdkDropListConnectedTo]="[doneList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    @for (item of todo; track item) {
+      <div class="example-box" cdkDrag>{{item}}</div>
+    }
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>Done</h2>
+
+  <div
+    cdkDropList
+    #doneList="cdkDropList"
+    [cdkDropListData]="done"
+    [cdkDropListConnectedTo]="[todoList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    @for (item of done; track item) {
+      <div class="example-box" cdkDrag>{{item}}</div>
+    }
+  </div>
+</div> -->
+

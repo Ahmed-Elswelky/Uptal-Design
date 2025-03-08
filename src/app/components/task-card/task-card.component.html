@@ -1,0 +1,22 @@
+<div cdkDrag class="task-card mb-3">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="photo mb-3">
+        <img [src]="task.photo" alt="">
+      </div>
+      <div class="gpa">
+        {{task.gpa}} 
+      </div>
+     
+    </div>
+    <div class="col-md-6">
+      <div class="co mb-3">
+        <h3 class="name">{{task.name}}</h3>
+        <p class="city">{{task.city}}</p>
+      </div>
+      <div class="phone">
+        {{task.phone}}
+      </div>
+    </div>
+  </div>
+</div>

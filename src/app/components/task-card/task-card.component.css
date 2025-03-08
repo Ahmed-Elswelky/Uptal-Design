@@ -1,0 +1,24 @@
+.task-card {
+  cursor: grab; /* Show drag cursor */
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none; /* Safari support */
+  -moz-user-select: none; /* Firefox support */
+  -ms-user-select: none; /* Older Edge */
+  background-color: white;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.task-card:active {
+  cursor: grabbing;
+}
+.drag-handle {
+  cursor: grab;
+  padding: 5px;
+  font-weight: bold;
+}
+img {
+  border-radius: 20px;
+  width: 60px;
+}
+
